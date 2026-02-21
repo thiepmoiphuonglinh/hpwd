@@ -15,28 +15,6 @@ export const home = () => {
                <span class="bride_tp">${bridePName}</span>
            </figcaption>`;
     };
-    const generateTimeContent = ({time}) => {
-        const {year, month, date, day} = time.marriage;
-        return `
-        <time datetime="${year}-${String(monthNameToNumber(month)).padStart(2, '0')}-${String(date).padStart(2, '0')}">
-            ${day}, ${date} ${month} ${year}
-        </time>`;
-    };
-
-    const generateCountdownMarkup = (days, hours, minutes, seconds) => {
-        return `<div>
-                    <p>${days}<br><span>Ngày</span></p>
-                </div>
-                <div>
-                    <p>${hours}<br><span>Giờ</span></p>
-                </div>
-                <div>
-                    <p>${minutes}<br><span>Phút</span></p>
-                </div>
-                <div>
-                    <p>${seconds}<br><span>Giây</span></p>
-                </div>`;
-    };
 
     const updateCountdown = (endTime, homeTime) => {
         const now = new Date().getTime();
@@ -49,9 +27,6 @@ export const home = () => {
 
         if (distance < 0) {
             clearInterval(intervalId);
-            homeTime.innerHTML = generateCountdownMarkup(0, 0, 0, 0);
-        } else {
-            homeTime.innerHTML = generateCountdownMarkup(days, hours, minutes, seconds);
         }
     };
 
@@ -66,7 +41,6 @@ export const home = () => {
     const initializeHome = () => {
         const {bride, time, link} = data;
         figureElement.innerHTML = generateFigureContent({bride});
-        timeElement.innerHTML = generateTimeContent({time});
         startCountdown(homeTime, time);
     };
 
@@ -77,7 +51,7 @@ export const home = () => {
     };
 
     const createCalendar = () => {
-        const { year, month, day } = WEDDING_DATE;
+        const { year, month } = WEDDING_DATE;
 
         const firstDay = new Date(year, month, 1).getDay(); // 0 = CN
         const daysInMonth = new Date(year, month + 1, 0).getDate();
@@ -94,13 +68,25 @@ export const home = () => {
             daysHTML += `<span class="empty"></span>`;
         }
 
-        // Các ngày trong tháng
         for (let i = 1; i <= daysInMonth; i++) {
-            daysHTML += `
-                <span class="${i === day ? 'wedding-day' : ''}">
-                    ${i}
-                </span>
-            `;
+           let content = i;
+           let className = '';
+
+           if (i === 7) {
+               className = 'wedding-day bride-day';
+               content = `👰<br>${i}`;
+           }
+       
+           if (i === 8) {
+               className = 'wedding-day groom-day';
+               content = `🤵<br>${i}`;
+           }
+       
+           daysHTML += `
+               <span class="${className}">
+                   ${content}
+               </span>
+           `;
         }
 
         return `
@@ -115,7 +101,10 @@ export const home = () => {
                     ${daysHTML}
                 </div>
 
-                <p class="calendar-note">💍 Ngày diễn ra lễ cưới</p>
+                <p class="calendar-note">
+                    👰 7/3: Nhà gái · 🤵 8/3: Nhà trai
+                </p>
+                
                 <button class="close-calendar">Đóng</button>
             </div>
         `;

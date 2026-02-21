@@ -9,12 +9,10 @@ export const time = () => {
     const createTimeListItem = (title, details) => (
         `<h3>${title}</h3>
          <p>${details.day}, ${details.date} ${details.month} ${details.year} <br> 
-         Bắt đầu lúc ${details.hours.start}</p>`
+         Bắt đầu lúc ${details.hours.start}</p>
+         Tại  ${details.address}</p>`
     );
 
     marriageDiv.innerHTML = createTimeListItem('Nhà gái', data.time.marriage);
     receptionDiv.innerHTML = createTimeListItem('Nhà trai', data.time.reception);
-
-    mapLink.href = data.link.map;
-    addressParagraph.textContent = data.time.address;
 };

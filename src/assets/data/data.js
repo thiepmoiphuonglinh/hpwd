@@ -6,7 +6,7 @@ export const data = {
             child: 'Nhà Trai',
             father: 'Vương Văn Hà',
             mother: 'Đặng Thị Huệ',
-            image: './src/assets/images/groom.png'
+            image: './src/assets/images/groom.jpg'
         },
         P: {
             id: 2,
@@ -14,7 +14,7 @@ export const data = {
             child: 'Nhà Gái',
             father: 'Nguyễn Đức Khánh',
             mother: 'Nguyễn Thị Bình',
-            image: './src/assets/images/bride.png'
+            image: './src/assets/images/bride.jpg'
         },
 
         couple: './src/assets/images/couple.jpg'
@@ -29,7 +29,8 @@ export const data = {
             hours: {
                 start: '16h00 - Thứ bảy',
                 finish: 'Selesai'
-            }
+            },
+            address: 'Ủy ban nhân dân thị trấn Sơn Dương cũ (Đối diện Viettel Sơn Dương)',
         },
         reception: {
             year: '2026',
@@ -37,15 +38,14 @@ export const data = {
             date: 'ngày 08',
             day: 'Sơn Dương',
             hours: {
-                start: '8h00 - Chủ nhật',
+                start: '9h00 - Chủ nhật',
                 finish: 'Selesai'
-            }
+            },
+            address: '81 tổ dân phố Măng Ngọt, Sơn dương, Tuyên quang',
         },
-        address: 'Ủy ban nhân dân thị trấn Sơn Dương cũ (Đối diện Viettel Sơn Dương)'
     },
 
     link: {
-        map: 'https://maps.app.goo.gl/o7XiCdyYTf5KrM1A8',
         calendar: '',
     },
 
@@ -79,6 +79,13 @@ export const data = {
             rekening: '8001102000',
             name: 'Nguyễn Thu Phương',
             bankName: 'MB Bank'
+        },
+        {
+            id: 2,
+            qr: './src/assets/images/tech.jpg',
+            rekening: '5966856789',
+            name: 'Vương Tuấn Linh',
+            bankName: 'Techcombank'
         },
     ],
 

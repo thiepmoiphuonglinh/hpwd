@@ -201,3 +201,20 @@
     padding: 0.4rem 1rem;
     border-radius: 8px;
 }
+
+.bride-day {
+    background: #ffe4ec;
+    color: #c2185b;
+}
+
+.groom-day {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+.bride-day,
+.groom-day {
+    line-height: 1.2;
+}
+.l{
+    margin-top: 50px;
+}
