@@ -72,10 +72,10 @@ export const home = () => {
            let content = i;
            let className = '';
 
-           if (i === 7) {
-               className = 'wedding-day bride-day';
-               content = `👰<br>${i}`;
-           }
+        //    if (i === 7) {
+        //        className = 'wedding-day bride-day';
+        //        content = `👰<br>${i}`;
+        //    }
        
         //    if (i === 8) {
         //        className = 'wedding-day groom-day';

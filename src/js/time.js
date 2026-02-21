@@ -14,5 +14,4 @@ export const time = () => {
     );
 
     marriageDiv.innerHTML = createTimeListItem('Nhà gái', data.time.marriage);
-
 };
