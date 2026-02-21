@@ -6,14 +6,14 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    background-color: #212529;
+    background-color: #F6E3A1;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 99;
-    color: #fff;
+       color: #8B1E1E;
     transition: all 2s ease-in;
     opacity: 0;
     transform: translateY(-100%);
@@ -74,7 +74,7 @@ font-family: 'Great Vibes', cursive;
     align-items: inherit;
     justify-content: inherit;
     gap: 0.4rem;
-    color: #000;
+    color: #8B1E1E;
     padding: 0.5rem 1rem;
     border: none;
     transition: var(--transition-small);
@@ -83,8 +83,8 @@ font-family: 'Great Vibes', cursive;
 }
 
 .welcome button:hover {
-    color: #fff;
-    background-color: #000;
+    color: #dfd4d4;
+     background-color: #8B1E1E;
 }
 
 .welcome button i {
