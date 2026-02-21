@@ -80,13 +80,6 @@ export const data = {
             name: 'Nguyễn Thu Phương',
             bankName: 'MB Bank'
         },
-        {
-            id: 2,
-            qr: './src/assets/images/tech.jpg',
-            rekening: '5966856789',
-            name: 'Vương Tuấn Linh',
-            bankName: 'Techcombank'
-        },
     ],
 
     audio: './src/assets/audio/wedding.mp3',
