@@ -74,13 +74,6 @@ export const data = {
 
     bank: [
         {
-            id: 1,
-            qr: './src/assets/images/mb.png',
-            rekening: '8001102000',
-            name: 'Nguyễn Thu Phương',
-            bankName: 'MB Bank'
-        },
-        {
             id: 2,
             qr: './src/assets/images/tech.jpg',
             rekening: '5966856789',

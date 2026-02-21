@@ -13,6 +13,5 @@ export const time = () => {
          Tại  ${details.address}</p>`
     );
 
-    marriageDiv.innerHTML = createTimeListItem('Nhà gái', data.time.marriage);
     receptionDiv.innerHTML = createTimeListItem('Nhà trai', data.time.reception);
 };

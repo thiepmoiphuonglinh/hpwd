@@ -72,10 +72,10 @@ export const home = () => {
            let content = i;
            let className = '';
 
-           if (i === 7) {
-               className = 'wedding-day bride-day';
-               content = `👰<br>${i}`;
-           }
+        //    if (i === 7) {
+        //        className = 'wedding-day bride-day';
+        //        content = `👰<br>${i}`;
+        //    }
        
            if (i === 8) {
                className = 'wedding-day groom-day';
@@ -102,7 +102,7 @@ export const home = () => {
                 </div>
 
                 <p class="calendar-note">
-                    👰 7/3: Nhà gái · 🤵 8/3: Nhà trai
+                  🤵 8/3: Ngày tổ chức hôn lễ
                 </p>
                 
                 <button class="close-calendar">Đóng</button>
